@@ -1,0 +1,56 @@
+﻿CREATE DATABASE SearchTransport;
+
+USE SearchTransport;
+
+CREATE TABLE Location (
+    LocationID INT IDENTITY(1,1) PRIMARY KEY,
+    LocationName NVARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE Vehicle (
+    VehicleID INT IDENTITY(1,1) PRIMARY KEY,
+    VehicleName NVARCHAR(50) NOT NULL,
+    LocationID INT NOT NULL,
+	CONSTRAINT FK_Vehicle_LocationID FOREIGN KEY (LocationID) REFERENCES Location(LocationID),
+);
+
+
+CREATE TABLE Client (
+    ClientID INT IDENTITY(1,1) PRIMARY KEY,
+    ClientName NVARCHAR(50) NOT NULL,
+    LocationID INT NOT NULL,
+	CONSTRAINT FK_Client_LocationID FOREIGN KEY (LocationID) REFERENCES Location(LocationID),
+);
+
+INSERT INTO [dbo].[Location]
+           ([LocationName])
+VALUES
+('locacion 1'),
+('locacion 2'),
+('locacion 3'),
+('locacion 4');
+
+INSERT INTO [dbo].[Client]
+           ([ClientName]
+           ,[LocationID])
+VALUES
+('Cliente 1', (select LocationId from Location where LocationName = 'locacion 1')),
+('Cliente 2', (select LocationId from Location where LocationName = 'locacion 2')),
+('Cliente 3', (select LocationId from Location where LocationName = 'locacion 3')),
+('Cliente 4', (select LocationId from Location where LocationName = 'locacion 4'));
+
+INSERT INTO [dbo].[Vehicle]
+([VehicleName], [LocationID])
+VALUES
+('Vehículo 1', (select LocationId from Location where LocationName = 'locacion 1')),
+('Vehículo 2', (select LocationId from Location where LocationName = 'locacion 3')),
+('Vehículo 3', (select LocationId from Location where LocationName = 'locacion 1')),
+('Vehículo 4', (select LocationId from Location where LocationName = 'locacion 2')),
+('Vehículo 5', (select LocationId from Location where LocationName = 'locacion 2')),
+('Vehículo 6', (select LocationId from Location where LocationName = 'locacion 1')),
+('Vehículo 7', (select LocationId from Location where LocationName = 'locacion 4')),
+('Vehículo 8', (select LocationId from Location where LocationName = 'locacion 2')),
+('Vehículo 9', (select LocationId from Location where LocationName = 'locacion 1'));
+
+
