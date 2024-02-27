@@ -1,0 +1,11 @@
+@SearchTransportApi_HostAddress = http://localhost:5066
+
+PUT {{SearchTransportApi_HostAddress}}/api/Vehicles
+Accept: application/json
+Content-Type: application/json
+
+{
+  "LocationName": "locacion 1",
+  "ClientLocationName": "locacion 2"
+}
+###
