@@ -22,7 +22,6 @@
   <ItemGroup>
     <Folder Include="DataAccess\Context\" />
     <Folder Include="Models\DataAccessModels\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchTransportApi", "SearchTransportApi.csproj", "{A80D7DB1-CF70-49D7-BFC8-0C2D2D0CFEC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchTransportApi", "SearchTransportApi.csproj", "{A80D7DB1-CF70-49D7-BFC8-0C2D2D0CFEC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSearchTransport", "..\TestSearchTransport\TestSearchTransport.csproj", "{955CCF9A-C996-49BC-9413-CA6E695F3EEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A80D7DB1-CF70-49D7-BFC8-0C2D2D0CFEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A80D7DB1-CF70-49D7-BFC8-0C2D2D0CFEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A80D7DB1-CF70-49D7-BFC8-0C2D2D0CFEC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955CCF9A-C996-49BC-9413-CA6E695F3EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955CCF9A-C996-49BC-9413-CA6E695F3EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955CCF9A-C996-49BC-9413-CA6E695F3EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955CCF9A-C996-49BC-9413-CA6E695F3EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
