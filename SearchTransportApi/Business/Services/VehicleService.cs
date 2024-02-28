@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SearchTransportApi.Business.Interfaces;
 using SearchTransportApi.DataAccess.Interfaces;
-using SearchTransportApi.DataAccess.Repositories;
 using SearchTransportApi.Models.DataAccessModels;
 
 namespace SearchTransportApi.Business.Services

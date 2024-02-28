@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using SearchTransportApi.Business.Interfaces;
 using SearchTransportApi.Business.Services;
 using SearchTransportApi.DataAccess.Interfaces;
 using SearchTransportApi.Models.DataAccessModels;
@@ -15,7 +12,6 @@ namespace TestSearchTransport.Business.Services
     {
         #region Dependencies
 
-        // Example:
         private Mock<IVehicleRepository> _vehicleRepositoryMock;
         private Mock<ILogger<VehicleService>> _loggerMock;
 
@@ -26,7 +22,6 @@ namespace TestSearchTransport.Business.Services
         [TestInitialize]
         public void TestInitialize()
         {
-            // Example:
             _vehicleRepositoryMock = new Mock<IVehicleRepository>();
             _loggerMock = new Mock<ILogger<VehicleService>>();
         }

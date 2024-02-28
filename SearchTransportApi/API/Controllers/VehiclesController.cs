@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Azure;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using SearchTransportApi.Business.Interfaces;
 using SearchTransportApi.Business.Services;
-using SearchTransportApi.DataAccess.Context;
 using SearchTransportApi.Models.ApiModels;
 using SearchTransportApi.Models.DataAccessModels;
 
@@ -26,6 +18,7 @@ namespace SearchTransportApi.API.Controllers
             _vehicleService = vehicleService;
             _logger = logger;
         }
+
         /// <summary>
         /// Get vehicles by location.
         /// </summary>
@@ -60,9 +53,6 @@ namespace SearchTransportApi.API.Controllers
                 _logger.LogError($"Error : {ex.Message}");
                 return NotFound();
             }
-
-           
         }
-
     }
 }
